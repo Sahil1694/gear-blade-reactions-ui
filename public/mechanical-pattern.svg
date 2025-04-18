@@ -1,9 +1,21 @@
 
 <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <pattern id="mechanical" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-    <path d="M0 0h20v20H0z" fill="none"/>
-    <circle cx="10" cy="10" r="2" fill="currentColor"/>
-    <path d="M10 2v4M2 10h4m8 0h4M10 14v4" stroke="currentColor" strokeWidth="1"/>
-  </pattern>
+  <defs>
+    <pattern id="mechanical" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 0h40v40H0z" fill="none"/>
+      <!-- Gear shape -->
+      <circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="20" cy="20" r="3" fill="currentColor"/>
+      <!-- Gear teeth -->
+      <path d="M20 8v4M8 20h4m16 0h4M20 28v4" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M12 12l3 3m10-3l-3 3m-7 10l3-3m7 3l-3-3" stroke="currentColor" stroke-width="1"/>
+    </pattern>
+    
+    <pattern id="blueprint" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 0h20v20H0z" fill="none"/>
+      <path d="M0 0h20M0 20h20M0 0v20M20 0v20" stroke="currentColor" stroke-width="0.2" opacity="0.3"/>
+    </pattern>
+  </defs>
   <rect width="100" height="100" fill="url(#mechanical)"/>
+  <rect width="100" height="100" fill="url(#blueprint)"/>
 </svg>

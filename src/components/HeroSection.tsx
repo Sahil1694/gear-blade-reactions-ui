@@ -5,27 +5,41 @@ import { Settings, Cog, Wrench, Hammer, Gauge } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center py-12 overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center py-12 overflow-hidden min-h-[400px]">
+      {/* Background layers */}
       <div className="absolute inset-0 bg-metal-gradient opacity-70 z-0">
-        {/* Mechanical pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/mechanical-pattern.svg')] opacity-5"></div>
+        {/* Blueprint pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/mechanical-pattern.svg')] opacity-5 rotate-45 scale-150"></div>
+        
+        {/* Additional mechanical texture */}
+        <div className="absolute inset-0 bg-gradient-to-b from-mechanical-dark/50 via-mechanical-accent/5 to-mechanical-dark/50"></div>
       </div>
       
-      {/* Background animated elements */}
-      <div className="absolute top-6 left-1/4 opacity-20">
-        <AnimatedGear size="lg" speed="slow" color="#9F9EA1" />
-      </div>
-      <div className="absolute bottom-12 right-1/4 opacity-30">
-        <AnimatedGear size="md" speed="medium" color="#9F9EA1" icon="cog" />
-      </div>
-      <div className="absolute top-1/2 left-1/6 opacity-20">
-        <AnimatedGear size="sm" speed="fast" color="#9F9EA1" icon="cog" />
-      </div>
-      <div className="absolute top-1/3 right-1/6 opacity-25">
-        <AnimatedGear size="md" speed="medium" color="#9F9EA1" />
-      </div>
-      <div className="absolute bottom-1/4 left-1/3 opacity-20">
-        <AnimatedGear size="sm" speed="fast" color="#9F9EA1" />
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large background gears */}
+        <div className="absolute -top-10 -left-10 opacity-10 scale-150">
+          <AnimatedGear size="lg" speed="slow" color="#9F9EA1" />
+        </div>
+        <div className="absolute -bottom-10 -right-10 opacity-10 scale-150">
+          <AnimatedGear size="lg" speed="slow" color="#9F9EA1" icon="cog" />
+        </div>
+        
+        {/* Medium floating gears */}
+        <div className="absolute top-1/4 right-1/4 opacity-20">
+          <AnimatedGear size="md" speed="medium" color="#9F9EA1" />
+        </div>
+        <div className="absolute bottom-1/3 left-1/3 opacity-20">
+          <AnimatedGear size="md" speed="fast" color="#9F9EA1" icon="cog" />
+        </div>
+        
+        {/* Small floating gears */}
+        <div className="absolute top-1/2 right-1/6 opacity-15">
+          <AnimatedGear size="sm" speed="fast" color="#9F9EA1" />
+        </div>
+        <div className="absolute bottom-1/4 left-1/6 opacity-15">
+          <AnimatedGear size="sm" speed="medium" color="#9F9EA1" icon="cog" />
+        </div>
       </div>
       
       {/* Main content */}
@@ -38,7 +52,7 @@ const HeroSection: React.FC = () => {
           <AnimatedGear size="md" speed="fast" color="#1EAEDB" icon="cog" />
         </div>
         
-        <p className="text-mechanical-light text-lg mt-2 max-w-2xl">
+        <p className="text-mechanical-light text-lg mt-2 max-w-2xl backdrop-blur-sm bg-mechanical-dark/30 p-4 rounded-lg">
           Calculate bearing reactions, dynamic load capacities, and select the appropriate bearing designation for your mechanical system.
         </p>
         
@@ -51,7 +65,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Additional decorative elements */}
+      {/* Additional metallic overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-mechanical-dark/0 via-mechanical-accent/5 to-mechanical-dark/0 pointer-events-none"></div>
     </div>
   );
