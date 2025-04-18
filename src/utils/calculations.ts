@@ -1,4 +1,3 @@
-
 // All calculations are based on the provided Python code
 interface InputValues {
   rpm: number;
@@ -96,7 +95,7 @@ export const calculateBearingReactions = (inputs: InputValues): CalculationResul
   };
 };
 
-// Helper function to format numbers with 4 decimal places
+// Update the format function to use 2 decimal places
 export const formatNumber = (num: number): string => {
-  return num.toFixed(4);
+  return num.toFixed(2);
 };
