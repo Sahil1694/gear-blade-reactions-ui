@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom mechanical theme colors
+				mechanical: {
+					dark: '#1A1F2C',
+					medium: '#403E43',
+					light: '#9F9EA1',
+					accent: '#1EAEDB',
+					highlight: '#33C3F0',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { filter: 'drop-shadow(0 0 0.5rem rgba(30, 174, 219, 0.3))' },
+					'50%': { filter: 'drop-shadow(0 0 1rem rgba(30, 174, 219, 0.6))' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin-slow 12s linear infinite',
+				'spin-medium': 'spin-slow 8s linear infinite',
+				'spin-fast': 'spin-slow 6s linear infinite reverse',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite'
+			},
+			backgroundImage: {
+				'metal-gradient': 'linear-gradient(to right, #1A1F2C, #403E43)',
+				'steel-gradient': 'linear-gradient(to bottom, #9F9EA1, #403E43)',
+				'card-gradient': 'linear-gradient(to bottom right, rgba(51, 195, 240, 0.1), rgba(30, 174, 219, 0.3))',
+				'highlight-gradient': 'linear-gradient(to right, rgba(30, 174, 219, 0.7), rgba(51, 195, 240, 0.9))'
+			},
+			boxShadow: {
+				'metal': '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1)',
+				'card-inner': 'inset 0 1px 3px rgba(0, 0, 0, 0.2)'
 			}
 		}
 	},
