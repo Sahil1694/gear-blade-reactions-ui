@@ -1,7 +1,7 @@
 
 import React from 'react';
 import AnimatedGear from './AnimatedGear';
-import { Settings, Cog, Wrench, Tool, Gauge } from 'lucide-react';
+import { Settings, Cog, Wrench, Hammer, Gauge } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
         
         <div className="flex justify-center mt-6 gap-3">
           <Wrench className="text-mechanical-accent animate-pulse" size={20} />
-          <Tool className="text-mechanical-accent" size={18} />
+          <Hammer className="text-mechanical-accent" size={18} />
           <Gauge className="text-mechanical-accent animate-pulse" size={20} />
           <Settings className="text-mechanical-accent" size={18} />
           <Cog className="text-mechanical-accent animate-spin-slow" size={20} />
